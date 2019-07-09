@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>China Vis 2019</title>
+</head>
+<body>
+<style>
+    .color-lump{
+        width: 30px;
+        height: 30px;
+        background-color: #33cd5f;
+        float: left;
+    }
+</style>
+<!--<link href="js/bootstrap-watch.css" rel="stylesheet" type="text/css" />-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!--<script src="js/bootstrap.min.js"></script>-->
+<!--<script src="js/bootstrap-select.min.js"></script>-->
+<script src="js/jquery.timer.js"></script>
+<script src = js/papaparse.min.js></script>
+<script src = js/js-colormaps.js></script>
+<script src = "global_var.js"></script>
+<script src = ui_control.js></script>
+<script src = draw_canvas.js></script>
+
+<div style="text-align: center;">
+    <h1>CICSC</h1>
+    <div>
+        <canvas id="canvas" width="1800" height="960" style="border: 3px solid rgb(170, 170, 170);width:900px;height:480px"></canvas>
+        <canvas id="canvas2" width="1800" height="960" style="border: 3px solid rgb(170, 170, 170);width:900px;height:480px"></canvas>
+    </div>
+
+    <div>
+        <input id="time_range" type="range" class="custom-range"  min="25000"
+               max="73000" value="0" style="width: 1200px;" oninput="change_time()"/>
+    </div>
+    
+    <div>
+        Time:&nbsp;
+        <label id = "show_time" style="width:100px">00 : 00 : 00</label>
+        &nbsp;&nbsp;&nbsp;
+        Second:&nbsp;
+        <label id = "show_second" style="width:100px">00 : 00 : 00</label>
+    </div>
+    <div>
+        <input id="stop_button" type="button" value="Stop" onclick="stop_button()" />
+        &nbsp;
+        <select id = "day_select">
+            <option value = "1">Day1</option>
+            <option value = "2">Day2</option>
+            <option value = "3">Day3</option>
+        </select>
+        &nbsp;
+        <input id="all_button" type="button" value="All: on" onclick="show_all()" />
+        <label>Speed:</label>
+        <input id="speed_num" type="number" value="250" style="width: 55px" onchange="adjust_speed()">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <input id="person_button" type="button" value="Person: on" onclick="show_person();" />
+        id:
+        <input id="id_num" type="number" value="19996" style="width: 55px" >
+        <input type="button" value="draw" onclick="change_id()"/>
+        &nbsp;
+        &nbsp;&nbsp;
+        <input id="show_number" type="button" value="Number: off" onclick="show_number()" />
+        &nbsp;&nbsp;
+        <input id="show_heatmap" type="button" value="Heatmap: off" onclick="show_heatmap()" />
+        &nbsp;&nbsp;
+        tag:
+        <select id = "tag_select">
+            <option value = "-1">-1</option>
+            <option value = "0">0</option>
+            <option value = "1">1</option>
+            <option value = "2">2</option>
+            <option value = "3">3</option>
+            <option value = "4">4</option>
+            <option value = "5">5</option>
+            <option value = "6">6</option>
+            <option value = "7">7</option>
+        </select>
+        &nbsp;&nbsp;
+        <input id="show_only" type="button" value="show_only: off" onclick="show_only()" />
+
+        <select id = "show_select">
+            <option value = "-1">-1</option>
+            <option value = "0">0</option>
+            <option value = "1">1</option>
+            <option value = "2">2</option>
+            <option value = "3">3</option>
+            <option value = "4">4</option>
+            <option value = "5">5</option>
+            <option value = "6">6</option>
+            <option value = "7">7</option>
+        </select>
+        &nbsp;&nbsp;
+        <input id="show_weak" type="button" value="show_weak: off" onclick="show_weak()" />
+        &nbsp;&nbsp;
+        <input id="clear_button"type="button" value="clear_all_tag" onclick="clear_all_tag()" />
+    </div>
+    <br>
+    <br>
+</div>
+<div id="tag_div" style="line-height: 40px">
+
+</div>
+
+<textarea id="ids" rows="8" cols="200">
+</textarea>
+tag:
+<select id = "tag_select2">
+    <option value = "-1">-1</option>
+    <option value = "0">0</option>
+    <option value = "1">1</option>
+    <option value = "2">2</option>
+    <option value = "3">3</option>
+    <option value = "4">4</option>
+    <option value = "5">5</option>
+    <option value = "6">6</option>
+    <option value = "7">7</option>
+</select>
+<input id="do_tag" type="button" value="Tag" onclick="do_tag()" />
+<br>
+<br>
+<br>
+<br>
+
+</body>
+</html>
