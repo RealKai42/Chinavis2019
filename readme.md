@@ -1,6 +1,7 @@
 Chinavis2019 挑战1 二等奖 部分系统（实时模拟部分）
 ===========================
-[![GitHub license](https://img.shields.io/github/license/aimerforreimu/AUXPI.svg)](https://github.com/aimerforreimu/AUXPI)    
+[![GitHub license](https://img.shields.io/github/license/aimerforreimu/AUXPI.svg)](https://github.com/aimerforreimu/AUXPI)  
+在线演示地址： https://kaiyiwing.github.io/Chinavis2019/ 
 ## 注意事项
 * 设计时考虑的是两个窗口并排的情形，建议使用时，首先调整浏览器分辨率使两个窗口并排。
 * 大多数计算与渲染是在前端完成，建议提前做好电脑升温的准备。
@@ -29,8 +30,6 @@ Chinavis2019 挑战1 二等奖 部分系统（实时模拟部分）
 ## 已知BUG
 * 当同时显示数字和热力图时，黑色叹号会变小。（好像知道大概bug在哪，懒得改了。。）
 * 下方输入框鲁棒性极差，所以注意输入格式。
-* 
-
 ## LICENSE
 
 GNU General Public License v3.0
